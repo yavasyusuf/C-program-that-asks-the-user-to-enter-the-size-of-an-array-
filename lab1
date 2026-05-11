@@ -1,0 +1,32 @@
+# C-program-that-asks-the-user-to-enter-the-size-of-an-array-
+#include<stdio.h>
+ calculateSums(int size, int arr[], int *evenSum, int *oddSum){
+    for(int i = 0;i<size;i++){
+        if(*(arr + i)==0){
+        evenSum = *evenSum + *(arr + i);
+        else{
+        *oddSum = *oddSum + *(arr + i);      
+    }
+   }
+ }
+
+ int main(){
+    int size;
+    int arr[10];
+    int evenSum, oddSum;
+         
+         printf("Enter size (max 10): );
+         scanf("%d", &size);
+           
+         printf("Enter %d elements: ", size);
+          for(int i = 0;i<size;i++){
+            scanf("%d", &arr[i]);
+          }
+
+        calculateSums(size, arr, &evenSum, &evenOdd);
+
+         printf("Even sum: %d", evenSum);
+         printf("Odd sum: %d", oddSum);
+
+         return 0;
+ }
